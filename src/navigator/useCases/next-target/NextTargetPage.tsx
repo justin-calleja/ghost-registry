@@ -1,5 +1,5 @@
-import { Layout, Logo, Nav, NavItem, Stripe } from '@design-system';
-import { Link } from 'react-router-dom';
+import { Layout, Logo } from '@design-system';
+import { NavStripe } from './NavStripe';
 import { useTargetGhost } from './useTargetGhost';
 
 export const NextTargetPage = () => {
@@ -7,14 +7,9 @@ export const NextTargetPage = () => {
 
     return (
         <Layout>
-            <Stripe>
+            <NavStripe to="/">
                 <Logo variant="xl" />
-            </Stripe>
-            <Nav>
-                <NavItem>
-                    <Link to="/">Home</Link>
-                </NavItem>
-            </Nav>
+            </NavStripe>
 
             {isPending && <p>Loading...</p>}
             {isError && <p>{String(error)}</p>}
