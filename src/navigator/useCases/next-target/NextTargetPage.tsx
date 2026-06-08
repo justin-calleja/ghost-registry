@@ -1,13 +1,9 @@
 import { Layout, Logo, Nav, NavItem, Stripe } from '@design-system';
-import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+import { useTargetGhost } from './useTargetGhost';
 
 export const NextTargetPage = () => {
-    useEffect(() => {
-        console.log('API_BASE_URL>>', API_BASE_URL);
-    }, []);
+    const { data, isPending, isError, error } = useTargetGhost();
 
     return (
         <Layout>
@@ -19,6 +15,10 @@ export const NextTargetPage = () => {
                     <Link to="/">Home</Link>
                 </NavItem>
             </Nav>
+
+            {isPending && <p>Loading...</p>}
+            {isError && <p>{String(error)}</p>}
+            {data && <pre>{JSON.stringify(data, null, 2)}</pre>}
         </Layout>
     );
 };
