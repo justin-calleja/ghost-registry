@@ -1,15 +1,15 @@
 import {
+    ButtonGroup,
+    CheckIcon,
     ContentLayout,
-    Layout,
-    Logo,
-    Stripe,
     FormField,
     HeadingTitle,
-    CheckIcon,
+    Layout,
     List,
     ListItem,
-    ButtonGroup,
+    Logo,
     SecondaryButton,
+    Stripe,
 } from '@design-system';
 
 export const GhostPage = () => {
