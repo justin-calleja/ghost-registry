@@ -9,7 +9,7 @@ export function SecondaryButton({
 }: ButtonProps) {
     return (
         <button
-            className={`w-fit border border-gray-300 rounded-md px-4 py-2 text-center ${className}`}
+            className={`w-fit border border-gray-300 rounded-md px-4 py-2 text-center transition-colors hover:border-gray-400 hover:bg-gray-50 active:border-gray-500 active:bg-gray-100 ${className}`}
             {...props}
         >
             {children}
