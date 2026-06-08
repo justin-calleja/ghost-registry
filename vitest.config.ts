@@ -5,10 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { storybookTest } from '@storybook/addon-vitest/vitest-plugin';
 import { playwright } from '@vitest/browser-playwright';
 
-const dirname =
-    typeof __dirname !== 'undefined'
-        ? __dirname
-        : path.dirname(fileURLToPath(import.meta.url));
+const dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
     extends: './vite.config.ts',
@@ -31,11 +28,7 @@ export default defineConfig({
             enabled: true,
             headless: true,
             provider: playwright({}),
-            instances: [
-                {
-                    browser: 'chromium',
-                },
-            ],
+            instances: [{ browser: 'chromium' }],
         },
     },
 });

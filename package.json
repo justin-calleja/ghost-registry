@@ -21,7 +21,7 @@
         "test:integration": "playwright test -c playwright-ct.config.ts --ui",
         "test:integration:headless": "playwright test -c playwright-ct.config.ts",
         "storybook": "storybook dev -p 6006",
-        "test:storybook": "vitest run -c vitest.storybook.config.ts"
+        "test:storybook": "vitest run -c vitest.config.ts"
     },
     "keywords": [],
     "author": {
@@ -43,7 +43,6 @@
         "zod": "^4.4.3"
     },
     "devDependencies": {
-        "@chromatic-com/storybook": "^5.2.1",
         "@eslint/js": "^10.0.1",
         "@playwright/experimental-ct-react": "^1.59.1",
         "@playwright/test": "^1.59.1",
