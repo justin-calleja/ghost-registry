@@ -1,5 +1,5 @@
+import { Layout, Logo, Nav, NavItem, Stripe } from '@design-system';
 import { Link } from 'react-router-dom';
-import { Layout, Stripe, Logo, Nav, NavItem } from '@design-system';
 
 export const NavigationPage = () => {
     return (
@@ -8,6 +8,9 @@ export const NavigationPage = () => {
                 <Logo variant="xl" />
             </Stripe>
             <Nav>
+                <NavItem>
+                    <Link to="/next-target">Next Target</Link>
+                </NavItem>
                 <NavItem>
                     <Link to="/restricted">Targets</Link>
                 </NavItem>
