@@ -8,6 +8,7 @@ export { Logo } from './Logo.tsx';
 export { Nav, NavItem } from './Nav.tsx';
 export { Layout, ContentLayout } from './PageLayout.tsx';
 export { Paragraph } from './Paragraph.tsx';
+export { Spinner } from './Spinner.tsx';
 export { Stripe } from './Stripe.tsx';
 export { TextInput } from './TextInput.tsx';
 export { CheckIcon } from './icons/CheckIcon.tsx';
